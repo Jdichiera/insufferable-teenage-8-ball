@@ -11,19 +11,26 @@ const generateMessage = () => {
 };
 
 const selectMessageBeginning = () => {
-  return beginningMessagePartials[0];
+  let randomIndex = getRandomIndex(beginningMessagePartials.length);
+  return beginningMessagePartials[randomIndex];
 };
 
 const selectMessageMiddle = () => {
-  return middleMessagePartials[0];
+  let randomIndex = getRandomIndex(middleMessagePartials.length);
+  return middleMessagePartials[randomIndex];
 };
 
 const selectMessageEnding = () => {
-  return endMessagePartials[0];
+  let randomIndex = getRandomIndex(endMessagePartials.length);
+  return endMessagePartials[randomIndex];
 };
 
 const formatMesssage = (message1, message2, message3) => {
   return `${message1} ${message2} ${message3}`;
+};
+
+const getRandomIndex = (length) => {
+  return Math.floor(Math.random() * length);
 };
 
 const printMessage = () => {
