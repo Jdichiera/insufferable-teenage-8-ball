@@ -38,13 +38,20 @@ const selectMessageEnding = () => {
 };
 
 const formatMesssage = (greeting, message1, message2, message3) => {
+  let newLine = "\n";
+  let tab = "\t";
   let message =
+    "--== Insufferable Teenage Magic 8-Ball ==--" +
+    "\n\n\tWith your question in mind .. you approach the all knowing 8-Ball .." +
+    "\n\n\t" +
     greeting +
-    "\n ... *considers your question* ... \n " +
+    "\n\tYou ask your question..." +
+    "\n\n\t" +
+    "\n\t" +
     message1 +
-    "\n" +
+    "\n\t" +
     message2 +
-    "\n" +
+    " " +
     message3;
   return message;
 };
