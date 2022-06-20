@@ -10,16 +10,6 @@ const generateMessage = () => {
   return formatMesssage(messageBeginning, messageMiddle, messageEnding);
 };
 
-const formatMesssage = (message1, message2, message3) => {
-  return `${message1} ${message2} ${message3}`;
-};
-
-const printMessage = () => {
-  let message = generateMessage();
-
-  console.log(`--== ${message} ==--`);
-};
-
 const selectMessageBeginning = () => {
   return beginningMessagePartials[0];
 };
@@ -30,6 +20,16 @@ const selectMessageMiddle = () => {
 
 const selectMessageEnding = () => {
   return endMessagePartials[0];
+};
+
+const formatMesssage = (message1, message2, message3) => {
+  return `${message1} ${message2} ${message3}`;
+};
+
+const printMessage = () => {
+  let message = generateMessage();
+
+  console.log(`--== ${message} ==--`);
 };
 
 printMessage();
